@@ -1,0 +1,6 @@
+#Ignoring logs, reports and screenshot files
+TestCases/*.xml
+TestCases/*.html
+TestCases/*.png
+TestCases/*.jpg
+!TestCases/*.robot
