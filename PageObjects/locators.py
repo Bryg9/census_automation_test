@@ -15,5 +15,9 @@ selector_clear = 'xpath://label[text()="Numer PESEL"]/ancestor::div[@class="v-te
 # Wybierz plec
 selector_male_radiobutton = 'xpath://div[text()="mężczyzna"]'
 selector_female_radiobutton = 'xpath://div[text()="kobieta"]'
+# Podaj date urodzenia
+date_birth_input_box = 'xpath://div[@class="v-text-field__slot"]//input[@min="1900-01-01" and @max="2003-03-31"]'
+# Sprawdz czy postep jest rowny 100
+selector_progress = 'xpath://div[@class="v-progress-circular__info"]'
 
 
