@@ -12,4 +12,8 @@ selector_middle_name = 'xpath://label[text()="Drugie imię"]/../input'
 selector_pesel = 'xpath://label[text()="Numer PESEL"]/../input'
 selector_next_visible_element = 'xpath://div[text()="mężczyzna"]'
 selector_clear = 'xpath://label[text()="Numer PESEL"]/ancestor::div[@class="v-text-field__slot"]/../div[@class="v-input__append-inner"]//button'
+# Wybierz plec
+selector_male_radiobutton = 'xpath://div[text()="mężczyzna"]'
+selector_female_radiobutton = 'xpath://div[text()="kobieta"]'
+
 
