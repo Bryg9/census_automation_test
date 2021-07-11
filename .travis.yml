@@ -3,7 +3,7 @@ dist: xenial
 sudo: required
 jobs:
   include:
-    - name: "Python 3.8.0 on Windows"
+    name: "Python 3.8.0 on Windows"
     os: windows
     language: shell
     python: "3.8"
