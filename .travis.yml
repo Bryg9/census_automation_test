@@ -23,5 +23,6 @@ before_script:
   - mkdir geckodriver chromedriver
   - unzip chromedriver_win32.zip -d chromedriver/
   - export PATH=$PATH:$PWD/chromedriver
+  - sleep 10
 script:
 - "robot TestCases/test_5_input_birth_date_from_pesel_go_to_next_page.robot"
