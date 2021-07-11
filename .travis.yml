@@ -1,6 +1,5 @@
 language: python
 dist: xenial
-sudo: required
 jobs:
   include:
     name: "Python 3.8.0 on Windows"
@@ -20,6 +19,6 @@ branches:
   
 before_script:
   - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_win32.zip
-  - unzip chromedriver_win32.zip -d /home/travis/virtualenv/Scripts/
+  - unzip chromedriver_win32.zip -d c:/python38/Scripts/
 script:
 - "robot TestCase/*.robot"
