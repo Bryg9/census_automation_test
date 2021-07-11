@@ -19,6 +19,7 @@ branches:
   
 before_script:
   - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_win32.zip
-  - unzip chromedriver_win32.zip -d c:/python38/Scripts/
+  - unzip chromedriver_win32.zip -d C:/Users/travis/AppData/Local/Google/Chrome/Application/
+  - sleep 10
 script:
 - "robot TestCases/*.robot"
