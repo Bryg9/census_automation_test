@@ -21,4 +21,4 @@ before_script:
   - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_win32.zip
   - unzip chromedriver_win32.zip -d c:/python38/Scripts/
 script:
-- "robot TestCase/*.robot"
+- "robot TestCases/*.robot"
