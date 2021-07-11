@@ -1,13 +1,12 @@
 os: windows
-language:
-  - sh
-  - python
+language: sh
 python:
-  - "3.6"
+  - "3.8"
 addons:
   chrome: stable
 before_install:
-  - choco install python3
+  - choco install python --version=3.8.0
+  - choco install pip
   - export PATH="/c/Python38:/c/Python38/Scripts:$PATH"
   - python3 -m pip install --upgrade pip wheel
 install:
