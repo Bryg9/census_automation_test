@@ -19,7 +19,7 @@ branches:
   
 before_script:
   - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_win32.zip
-  - unzip chromedriver_win32.zip -d C:/Users/travis/AppData/Local/Google/Chrome/Application/
-  - sleep 10
+  - unzip chromedriver_win32.zip -d C:/python38/Scripts/
+  env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 script:
-- "robot TestCases/*.robot"
+- "robot TestCases/test_5_input_birth_date_from_pesel_go_to_next_page.robot"
