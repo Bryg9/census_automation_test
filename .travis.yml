@@ -11,7 +11,7 @@ jobs:
     before_install:
       - choco install python --version 3.8.0
       - python -m pip install --upgrade pip
-      - choco install googlechrome --version=91.0.4472.114
+      - choco install googlechrome --version=91.0.4472.114 --ignore-checksums
     env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 install:
   - pip install selenium==3.141.0
