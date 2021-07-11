@@ -1,5 +1,7 @@
 os: windows
-language: python
+language:
+  - sh
+  - python
 python:
   - "3.6"
 addons:
