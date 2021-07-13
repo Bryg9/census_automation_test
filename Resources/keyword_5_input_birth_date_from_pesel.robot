@@ -74,9 +74,10 @@ Podaj date urodzenia
    Log To Console   ${result}
    Click element   ${date_birth_input_box}
    Input text   ${date_birth_input_box}   ${result}
-   Sleep   6
+   Sleep   3
 
 Sprawdz czy postep jest rowny 100
+   Press Keys   xpath=//body   \ue00f
    ${progress} =   get text   ${selector_progress}
    Should be equal   ${progress}   100
    Sleep   3
