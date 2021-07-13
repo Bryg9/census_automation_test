@@ -74,7 +74,7 @@ Podaj date urodzenia
    Log To Console   ${result}
    Click element   ${date_birth_input_box}
    Input text   ${date_birth_input_box}   ${result}
-   Sleep   3
+   Sleep   6
 
 Sprawdz czy postep jest rowny 100
    ${progress} =   get text   ${selector_progress}
