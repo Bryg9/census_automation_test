@@ -35,6 +35,7 @@ Wpisanie drugiego imienia
 
 Wybranie prawidlowego numeru PESEL z listy
    [Arguments]   @{pesel}
+   Press Keys   xpath=//body   \ue00f
    FOR  ${i}  IN   @{pesel}
       Sleep   3
       Click Element   ${selector_pesel}
