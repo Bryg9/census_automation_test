@@ -6,6 +6,8 @@ jobs:
     os: windows
     language: shell
     python: "3.8"
+    addons:
+      chrome: stable
     before_install:
       - choco install python --version 3.8.0
       - python -m pip install --upgrade pip
