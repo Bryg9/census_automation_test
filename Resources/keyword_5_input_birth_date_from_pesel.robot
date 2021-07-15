@@ -32,12 +32,13 @@ Wpisanie imienia
 Wpisanie drugiego imienia
    [Arguments]   ${middle name}
    Input text   ${selector_middle_name}   ${middle name}
+   Sleep   3
 
 Wybranie prawidlowego numeru PESEL z listy
    [Arguments]   @{pesel}
    Press Keys   xpath=//body   \ue00f
+   Sleep   3
    FOR  ${i}  IN   @{pesel}
-      Sleep   3
       Click Element   ${selector_pesel}
       Input text   ${selector_pesel}   ${i}
       Sleep   3
@@ -49,13 +50,14 @@ Wybranie prawidlowego numeru PESEL z listy
       Page should contain   Niepoprawny numer PESEL.
       Click Element  ${selector_clear}
    END
+   Sleep   3
 
    ${for value pesel} =   Get value   ${selector_pesel}
    [Return]   ${for value pesel}
+   Sleep   3
 
 Wybierz plec
    [Arguments]   ${pesel number from page}   ${male radio button}
-   Sleep   3
    ${result} =   test_choose_gender   ${pesel number from page}
    Log To Console   ${result}
 
@@ -69,20 +71,28 @@ Wybierz plec
 
 Podaj date urodzenia
    [Arguments]   ${pesel number from page}
-   Sleep   3
    ${result} =   test_input_birth_date   ${pesel number from page}
    Log To Console   ${result}
    Click element   ${date_birth_input_box}
+   Sleep   3
    Input text   ${date_birth_input_box}   ${result}
+   Sleep   3
+   ${actual_text_from_birth_input_box} =   Get Element Attribute   ${date_birth_input_box}   value
+   Sleep   3
+   Log to console   ${actual_text_from_birth_input_box}
    Sleep   3
 
 Sprawdz czy postep jest rowny 100
    Press Keys   xpath=//body   \ue00f
+   Sleep   3
    ${progress} =   get text   ${selector_progress}
+   Sleep   3
    Should be equal   ${progress}   100
    Sleep   3
 
 Klikniecie w przycisk Dalej
+   Press Keys   xpath=//body   \ue00f
+   Sleep   3
    Click element   ${selector_button_next}
    Sleep   3
 
