@@ -23,6 +23,8 @@ Wpisanie nazwiska
    Sleep   3
 
 Klikniecie w przycisk Dalej
+   Press Keys   xpath=//body   \ue00f
+   Sleep   3
    Click element   ${selector_button_next}
    Sleep   3
 
