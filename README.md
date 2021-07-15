@@ -42,3 +42,65 @@ mandatory fields, and what alerts will appear
 on the website, when the form is incorrectly completed. 
 
 ### How to run this project on Windows 10
+#### By using Chocolatey:
+* Get the right click on Windows Powershell (click start and type "powershell") and choose “Run as Administrator“, then paste command:
+```
+    > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+* After success installation of Chocolatey, reopen PowerShell window, and install Python 3.8:
+```
+    > choco install python --version 3.8.0
+
+    # note that you should add Python into sys PATH, check if python version appears by executing command:
+    > python --version
+
+    # if not, look here:
+    https://datatofish.com/add-python-to-windows-path/ and add python into PATH manually
+```
+* Install Chrome manually from website, or use PowerShell command:
+```
+    > choco install googlechrome
+```
+* Add proper chromedriver into sys PATH like [here](https://zwbetz.com/download-chromedriver-binary-and-add-to-your-path-for-automated-functional-testing/)
+* Fork and clone project into directory on your machine, you can use Git Bash command:
+```
+    # if you don't have installed git, use command:
+    > choco install git
+
+    # if you have installed git then clone repository from your github, after forking repo.
+    # Open Git Bash:
+    $ git clone https://github.com/<YOUR_GITHUB_USER_NAME>/census_automation_test.git
+```
+* Install all required libraries from cloned project, using pip command in PowerShell:
+```
+    > pip install -r requirements.txt
+```
+* After all before steps, you can run tests in project dir, by using commands:
+```
+  > "robot TestCases/test_1_give_last_name_check.robot"
+  > "robot TestCases/test_2_give_name_check.robot"
+  > "robot TestCases/test_3_give_pesel_number_from_list_check.robot"
+  > "robot TestCases/test_4_choose_gender_check_alert.robot"
+  > "robot TestCases/test_5_input_birth_date_from_pesel_go_to_next_page.robot"
+
+  # or by one command:
+  > robot TestCases/*.robot
+```
+#### By using PyCharm:
+After installing PyCharm IDE you should have done all steps above, except installing pip install -r requirements.txt  
+because it's possible to install those frameworks manually from PyCharm.  
+To do that, choose in PyCharm: File > Settings > Python Interpreter > select plus '+' icon > type selenium and install.  
+Install the others libraries this way: robotframework and robotframework-seleniumlibrary.  
+Run tests in PyCharm terminal window:
+```
+  > "robot TestCases/test_1_give_last_name_check.robot"
+  > "robot TestCases/test_2_give_name_check.robot"
+  > "robot TestCases/test_3_give_pesel_number_from_list_check.robot"
+  > "robot TestCases/test_4_choose_gender_check_alert.robot"
+  > "robot TestCases/test_5_input_birth_date_from_pesel_go_to_next_page.robot"
+
+  # or by one command:
+  > robot TestCases/*.robot
+```
+If you prefer, you can create virtual environment (.venv) in PyCharm with using existing python interpreter, and  
+install in (.venv) all frameworks like above as well.
