@@ -9,7 +9,7 @@ ${PAGE URL}   https://demo.spis.gov.pl/#/login?redirect=%2Fobligations
 ${LAST NAME}   Nowak
 ${NAME}   Jan
 ${MIDDLE NAME}   Marian
-@{PESEL}   01210214625   75122663915   75052275773   66093085325
+@{PESEL}   01210214625   75122663915   75020216393   66093085325
 ${SPACE}
 ${RADIO BUTTON}   Osoba${SPACE}to${SPACE}mężczyzna
 
