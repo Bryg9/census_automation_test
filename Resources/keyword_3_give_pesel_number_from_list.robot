@@ -30,11 +30,13 @@ Wpisanie imienia
 Wpisanie drugiego imienia
    [Arguments]   ${middle name}
    Input text   ${selector_middle_name}   ${middle name}
+   Sleep   3
 
 Wybranie prawidlowego numeru PESEL z listy
    [Arguments]   @{pesel}
+   Press Keys   xpath=//body   \ue00f
+   Sleep   3
    FOR  ${i}  IN   @{pesel}
-      Sleep   3
       Click Element   ${selector_pesel}
       Input text   ${selector_pesel}   ${i}
       Sleep   3
@@ -46,15 +48,15 @@ Wybranie prawidlowego numeru PESEL z listy
       Page should contain   Niepoprawny numer PESEL.
       Click Element  ${selector_clear}
    END
+   Sleep   3
 
 Klikniecie w przycisk Dalej
-   Sleep   3
    Press Keys   xpath=//body   \ue00f
    Sleep   3
    Click element   ${selector_button_next}
+   Sleep   3
 
 Sprawdzenie czy pojawil sie komunikat przypominajacy o wybraniu plci
-   Sleep   3
    Page Should Contain   Płeć jest wymagana.
    Sleep   3
 
